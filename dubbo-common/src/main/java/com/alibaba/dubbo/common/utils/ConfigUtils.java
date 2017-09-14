@@ -140,7 +140,8 @@ public class ConfigUtils {
     }
 	
     private static volatile Properties PROPERTIES;
-    
+    //Dubbo将自动加载classpath根目录下的dubbo.properties，可以通过JVM启动参数：-
+    //Ddubbo.properties.file=xxx.properties 改变缺省配置位置。
     public static Properties getProperties() {
         if (PROPERTIES == null) {
             synchronized (ConfigUtils.class) {
